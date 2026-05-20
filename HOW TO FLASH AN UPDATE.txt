@@ -1,0 +1,38 @@
+
+
+    Jul 7, 2024 
+
+    #15
+
+    anonkrono said:
+    Can you please make a guide on how to update the phone with those tools?
+
+Here is how I updated the phone:
+1. Download Newflasher and the latest ROM via xperifirm
+2. Extract the firmware and Newflasher.
+3. Copy Newflasher files into the same folder where you extracted the ROM
+4. In the ROM folder I deleted the file "persist_X-FLASH-ALL-88DF.sin". Not sure if it is needed, but I wanted to make sure the persist partition is not being flashed.
+5. press and hold (power+ vol down) while plugging the usb cable. You should be seeing a green asterisk.
+6. From within the ROM folder open a terminal window and type
+Code:
+
+newflasher set_active:a
+
+and then just
+Code:
+
+newflasher
+
+7. Follow the steps and when you are being asked to pull a dump select no, cause it doesn't work.
+8. To re-gain root: Patch the init_boot.img with magisk and boot the phone into fastboot
+9. Flash the image typing:
+Code:
+
+fastboot flash init_boot magisk_patched.img
+
+ 
+Last edited: Jul 25, 2024
+
+    Like 
+
+Reactions: Jayram2000, ricey4you, anonkrono and 1 other person 

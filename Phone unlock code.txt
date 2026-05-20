@@ -1,0 +1,2 @@
+fastboot oem unlock 0xD297EAF0C5169604
+fastboot flash init_boot magisk_patched-27000_ybEfq.img
